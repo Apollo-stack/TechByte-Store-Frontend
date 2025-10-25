@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="formAction.html" target="_self" id="form1">
+    <form action="formAction.html" target="_self" id="form1" method="post">
         <div>
             <label for="fname"> First Name:</label><br>
             <input type="text" id="fname" name="fname" required><br>
@@ -24,11 +24,11 @@
             <input type="email" id="email" name="email" required><br>
         </div>
         <div>
-            <label for="birthday"> Birthday:</label><br>
-            <input type="date" id="birthday" name="birthday" max="2012-01-01"><br>
+            <label for="idade"> Idade: </label><br>
+            <input type="number" id="idade" name="idade" min="18"><br>
         </div>
         <div>
-            <input type="submit" value="submit">
+            <button type="submit" value="submit">    
         </div>
 
 
