@@ -100,7 +100,7 @@ h1{
 
 .computador-item p {
     font-size: 0.9em;
-    color: #555;
+    color: #202020;
     margin-bottom: 15px;
     flex-grow: 1; /* Faz o parágrafo ocupar o espaço extra para alinhar os botões */
     font-family: 'Times New Roman', Times, serif;
