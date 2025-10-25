@@ -1,38 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulário de Contato</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <form action="formAction.html" target="_self" id="form1" method="post">
-        <div>
-            <label for="fname"> First Name:</label><br>
-            <input type="text" id="fname" name="fname" required><br>
+
+    <nav>
+        <ul>
+            <li class="inicio"> <a href="index.html">Início</a> </li>
+            <li class="formulario"> <a href="form.html">Formulário</a></li>
+            <li class="about"> <a href="about.html">Sobre</a> </li>
+        </ul>
+    </nav>
+
+    <hr> <h1>Entre em contato</h1><form 
+          action="formAction.html" 
+          target="_self" 
+          id="form1" 
+          method="get" >
+
+        <div class="fname">
+            <label for="fname"> Primeiro Nome:</label><br>
+            <input type="text" id="fname" name="fname" required>
         </div>
-        <div>
-            <label for="sname"> Second Name:</label><br>
-            <input type="text" id="sname" name="sname"><br>
+        <br>
+        <div class="sname">
+            <label for="sname"> Sobrenome:</label><br>
+            <input type="text" id="sname" name="sname">
         </div>
-        <div>
+        <br>
+        <div class="phone">
             <label for="phone">Telefone:</label><br>
-            <input type="tel" id="phone" name="phone" required><br>
+            <input type="tel" id="phone" name="phone">
         </div>
-        <div>
+        <br>
+        <div class="email">
             <label for="email">E-mail:</label><br>
-            <input type="email" id="email" name="email" required><br>
+            <input type="email" id="email" name="email" required>
         </div>
-        <div>
+        <br>
+        <div class="idade">
             <label for="idade"> Idade: </label><br>
-            <input type="number" id="idade" name="idade" min="18"><br>
+            <input type="number" id="idade" name="idade" min="18">
         </div>
-        <div>
-            <button type="submit" value="submit">    
+        <br>
+        <div class="button">
+            <button type="submit" value="submit"> Enviar Formulário</button>    
         </div>
 
 
     </form>
+
+    <script src="js/script.js"></script>
     
 </body>
 </html>
