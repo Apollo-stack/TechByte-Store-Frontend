@@ -173,3 +173,112 @@ h1{
     text-align: right;
     padding: auto;  
 }
+
+
+
+.informacoes{
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #dfdfdf;
+    text-align: center;
+    margin-top: 50px;
+    margin-right: 500px;
+    margin-left: 500px;
+    padding: 50px;
+  
+    
+}
+
+.buttonf{
+    font-size: 50px;
+    
+}
+
+
+.informacoesAction{
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #dfdfdf;
+    text-align: left;
+    margin-top: 100px;
+    margin-right: 700px;
+    margin-left: 700px;
+    padding: 50px;
+    background-color: #202020;
+    border-radius: 15px;
+    
+    
+    
+}
+
+.historia{
+    background-color: #dbdbdb;
+    margin-top: 25px;
+    padding-bottom: 100px;
+    margin-right: 1500px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 15px;
+    border-radius: 12px;
+    color: #000000;
+}
+
+.texto{
+    margin: 25px;
+    padding-top: 25px;
+}
+
+.qualidades{
+    margin-top: -780px;
+    text-align: center;
+    margin-right: 150px;
+    border-radius: 12px;
+    background-color: #a8a7aa;
+    color: #000000;
+    padding-right: 450px;
+    margin-left: 280px;   
+}
+
+.sobre{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.topico{
+    color: #000000;
+    font-size: large;
+    text-align: justify;
+    padding-top: 25px;
+    font-style:normal
+}
+
+.text{
+    text-align:center;
+    background-color: #1b113b;
+    margin-left: 25px;
+    color: #dfdfdf;
+    margin-right: -425px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 80px;
+    
+}
+
+.parceiros{
+    margin-top: -780px;
+    background-color: #dbdbdb;
+    margin-right: -250px;
+    padding-right: 150px;
+    color: #000000;
+    border-radius: 12px;
+}
+
+.textLoja{
+    text-align:right;
+    color: #000000;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-left: 25px;
+    padding-right: 100px;
+    
+}
