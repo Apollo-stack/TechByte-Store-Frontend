@@ -70,7 +70,6 @@ h1{
 
     /* Opcional: Para garantir que as caixas tenham pelo menos uma altura mínima */
     min-height: 350px; /* Ajuste este valor se necessário */
-    min-width: 300px;
     margin-bottom: 50px;
 
     /* Opcional: Para alinhar o conteúdo verticalmente (se as alturas variarem) */
@@ -234,14 +233,13 @@ h1{
     border-radius: 12px;
     background-color: #a8a7aa;
     color: #000000;
-    padding-right: 450px;
-    margin-left: 280px;   
+    
 }
 
 .sobre{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    margin: 20px;
 }
 
 .topico{
@@ -281,4 +279,22 @@ h1{
     margin-left: 25px;
     padding-right: 100px;
     
+}
+
+/* --- Media Queries para Responsividade --- */
+
+/* Para telas de notebook pequenas e tablets (ex: até 1024px) */
+@media (max-width: 1024px) {
+    .computador-item {
+        /* Muda de 3 para 2 colunas */
+        flex-basis: calc(50% - 20px); /* (100% / 2) - gap */
+    }
+}
+
+/* Para telas de celular (ex: até 600px) */
+@media (max-width: 600px) {
+    .computador-item {
+        /* Muda para 1 coluna */
+        flex-basis: 100%; /* Ocupa a largura total */
+    }
 }
