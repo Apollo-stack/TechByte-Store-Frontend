@@ -44,7 +44,68 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error("Erro: Formulário com id='form1' não encontrado!");
     }  
-});
+
+    // --- LÓGICA DO MODAL DINÂMICO ---
+
+    // 1. Seleciona os elementos do "esqueleto" do modal
+    const modalContainer = document.getElementById('modal-container');
+    const modalOverlay = document.getElementById('modal-overlay');
+    const modalFechar = document.getElementById('modal-fechar');
+    
+    // ... e os elementos DENTRO do modal que vamos preencher
+    const modalTitulo = document.getElementById('modal-titulo');
+    const modalImg = document.getElementById('modal-img');
+    const modalDesc = document.getElementById('modal-desc');
+
+    // 2. Seleciona TODOS os botões "Ver Mais..."
+    // (Confirme que você tem a classe 'btn-ver-mais' em todos os seus botões no HTML)
+    const botoesVerMais = document.querySelectorAll('.btn-ver-mais');
+
+    // 3. Função para ABRIR o modal com o conteúdo certo
+    function abrirModal(cartaoComputador) {
+        
+        // 4. Extrai os dados do cartão do computador que foi clicado
+        // O .querySelector() procura DENTRO do 'cartaoComputador'
+        const titulo = cartaoComputador.querySelector('h2').textContent;
+        const imgSrc = cartaoComputador.querySelector('img').src;
+
+        // Pega as especificações direto do atributo 'data-specs' do HTML!
+        const especificacoesDetalhadas = cartaoComputador.dataset.specs;
+
+        // 5. Preenche o "esqueleto" do modal com os dados extraídos
+        modalTitulo.textContent = titulo;
+        modalDesc.innerHTML = especificacoesDetalhadas; // Injeta as specs completas
+        modalImg.src = imgSrc;
+        
+        // 6. Mostra o modal (agora preenchido)
+        modalContainer.style.display = 'block';
+        modalOverlay.style.display = 'block';
+    }
+
+    // 7. Função para FECHAR o modal (continua a mesma)
+    function fecharModal() {
+        modalContainer.style.display = 'none';
+        modalOverlay.style.display = 'none';
+    }
+
+    // 8. Adiciona o "ouvinte" de clique em CADA botão "Ver Mais..."
+    botoesVerMais.forEach(function(botao) {
+        botao.addEventListener('click', function() {
+            // 'this' é o botão que foi clicado
+            // '.closest()' sobe na "árvore" HTML e encontra o "cartão" (div) 
+            // pai mais próximo que tem a classe '.computador-item'
+            const cartao = this.closest('.computador-item');
+            
+            // Abre o modal passando o cartão inteiro que encontramos
+            abrirModal(cartao); 
+        });
+    });
+
+    // 9. Adiciona os "ouvintes" para fechar (continua o mesmo)
+    modalFechar.addEventListener('click', fecharModal);
+    modalOverlay.addEventListener('click', fecharModal);
+
+}); // Fecha o DOMContentLoaded
 
 // Função para pegar parâmetros da URL
 function getQueryParams() {
