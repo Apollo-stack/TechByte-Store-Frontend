@@ -1,4 +1,4 @@
-/* 1. ESTILOS GLOBAIS (Estilos do Body) */
+/* 1. ESTILOS DO BODY*/
 
 html {
     height: 100%;
@@ -8,25 +8,21 @@ html {
 body {
     min-height: 100%; /* Faz o body ter no mínimo 100% da altura da tela */
     display: flex;
-    flex-direction: column; /* Diz ao body para empilhar o conteudo verticalmente */
-
-    /* Mantenha seus estilos de body que você já tinha */
+    flex-direction: column; 
     background-color: #0c0032;
     color: #8a8a8a;
 }
 
 main {
-    flex-grow: 1; /* Faz o <main> esticar e ocupar todo o espaço vazio */
+    flex-grow: 1; /* Faz o main ocupar todo o espaço vazio */
 }
 
 
-/* 2. ESTILOS DE COMPONENTES REUTILIZÁVEIS (Menu, Botões, Rodapé) */
+/* 2. ESTILOS DE MENU, BOTÕES E RODAPÉ */
 
 nav ul {
     display: flex; /* Transforma o UL em um container flexível */
-    justify-content: space-around; /* Distribui o espaço ENTRE os itens */
-
-    /* Remove estilos padrão da lista */
+    justify-content: space-around; /* Distribui o espaço entre os itens */
     list-style-type: none;
     padding:5px;
     margin: 5px; 
@@ -86,7 +82,7 @@ nav a:hover {
   right: 0;
 }
 
-/* Estilo para o parágrafo de descrição DENTRO do modal */
+/* Estilo para o parágrafo de descrição dentro do modal */
 #modal-desc {
     font-size: large;          
     color: #000000;            
@@ -102,7 +98,7 @@ nav a:hover {
 
 
 
-/* 3. ESTILOS ESPECÍFICOS DA PÁGINA: INDEX.HTML */
+/* 3. ESTILOS DA PÁGINA INDEX */
 
 h1{
     color: #f1f1f1;
@@ -115,29 +111,29 @@ h1{
     text-align: center;
 }
 
-/* Estilo para o CONTAINER que segura todos os computadores */
+/* Estilo para o container que segura todos os computadores */
 .Computadores {
     display: flex;
     flex-wrap: wrap; /* Permite quebrar a linha */
-    gap: 25px; /* Espaço ENTRE as caixas */
+    gap: 25px; /* Espaço entre as caixas */
     justify-content: space-evenly; 
     padding: 20px 0; 
 }
 
-/* Estilo para CADA CAIXA de computador */
+/* Estilo para cada caixa de computador */
 .computador-item {
     
     flex-basis: calc(33.333% - 20px * 2 / 3); /* (100% / 3) - (espaço total dos gaps / 3) */
-    box-sizing: border-box; /* Padding e border não aumentam a largura */
+    box-sizing: border-box; 
     border: 1px solid #181818;
     padding: 15px;
     text-align: center;
     background-color: #ffffff;
-    margin-bottom: 20px; /* Espaço abaixo de cada caixa se houver mais de uma linha */
+    margin-bottom: 20px; 
     min-height: 400px; 
     margin-bottom: 50px;
     display: flex;  
-    flex-direction: column; /* Coloca imagem, título, texto, botão um embaixo do outro */
+    flex-direction: column; 
     justify-content: space-between; /* Empurra o botão para o final da caixa */
     box-shadow: 4px 4px 9px 6px #802bb1;
     border-radius: 5px;
@@ -152,7 +148,7 @@ h1{
     margin: 0 auto 10px auto; /* Centraliza a imagem horizontalmente */
 }
 
-/* Estilos para o texto e botão DENTRO da caixa */
+/* Estilos para o texto e botão dentro da caixa */
 .computador-item h2 {
     font-size: 1.1em; 
     margin-bottom: 8px;
@@ -195,7 +191,7 @@ h1{
     padding: auto;  
 }
 
-/* 4. ESTILOS ESPECÍFICOS DA PÁGINA: FORM.HTML */
+/* 4. ESTILOS DA PÁGINA FORM */
 
 .informacoes{
     font-size: 19px;
@@ -217,7 +213,7 @@ h1{
 
 
 
-/*  5. ESTILOS ESPECÍFICOS DA PÁGINA: FORMACTION.HTML */
+/*  5. ESTILOS DA PÁGINA FORMACTION */
 
 .informacoesAction{
     font-size: 19px;
@@ -238,7 +234,7 @@ h1{
 }
 
 
-/* 6. ESTILOS ESPECÍFICOS DA PÁGINA: ABOUT.HTML */
+/* 6. ESTILOS DA PÁGINA ABOUT */
 
 .titulo{
     text-align:center;
@@ -261,7 +257,7 @@ h1{
 
 
 .historia {
-    flex-basis: 25%;       /* Define a largura base como 25% */
+    flex-basis: 25%;       /* Define a largura como 25% */
     background-color: #dbdbdb;
     border-radius: 12px;
     color: #000000;
@@ -275,7 +271,7 @@ h1{
 
 
 .qualidades {
-    flex-basis: 40%;       /* Define a largura base como 40% */
+    flex-basis: 40%;       /* Define a largura como 40% */
     background-color: #a8a7aa;
     border-radius: 12px;
     color: #000000;
@@ -284,7 +280,7 @@ h1{
 }
 
 .parceiros {
-    flex-basis: 25%;       /* Define a largura base como 25% */
+    flex-basis: 25%;       
     background-color: #dbdbdb;
     border-radius: 12px;
     color: #000000;
@@ -304,7 +300,7 @@ h1{
 
 /* O Fundo Escuro (Overlay) */
 .modal-fundo-escondido {
-    display: none; /* ESCONDIDO POR PADRÃO */
+    display: none; /* Fica escondido */
     position: fixed; /* Fica fixo na tela */
     z-index: 1000;   /* Fica na frente de tudo, menos da caixa do modal */
     left: 0;
@@ -314,14 +310,14 @@ h1{
     background-color: rgba(0, 0, 0, 0.7); /* Preto com 70% de transparência */
 }
 
-/* A Caixa de Conteúdo do Modal */
+/* A Caixa de conteúdo do Modal */
 .modal-caixa-escondida {
     display: none; 
     position: fixed;
     z-index: 1001;   /* Fica na frente do fundo escuro */
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); /* para centralizar */
+    transform: translate(-50%, -50%); /* pra centralizar */
     background-color: #fefefe;
     padding: 20px;
     border: 1px solid #888;
@@ -332,10 +328,10 @@ h1{
     color: #333; 
 }
 
-/* O Botão de Fechar (o 'X') */
+/* O botão de fechar ('X') */
 .modal-fechar-btn {
     color: #aaa;
-    float: right; /* Alinha o 'X' à direita */
+    float: right; /* Alinha o 'X' a direita */
     font-size: 28px;
     font-weight: bold;
 }
@@ -348,9 +344,9 @@ h1{
 }
 
 
-/* 8. MEDIA QUERIES (Responsividade)*/
+/* 8. MEDIA QUERIES */
 
-/* Para telas de notebook pequenas e tablets (ex: até 1024px) */
+/* Para telas de notebook pequenas e tablets */
 @media (max-width: 1024px) {
     .computador-item {
         /* Muda de 3 para 2 colunas */
@@ -358,7 +354,7 @@ h1{
     }
 }
 
-/* Para telas de celular (ex: até 600px) */
+/* Para telas de celular  */
 @media (max-width: 600px) {
     .computador-item {
         /* Muda para 1 coluna */
