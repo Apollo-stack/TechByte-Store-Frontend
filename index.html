@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR"> <!--Deixar em portugues a página-->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ramon Technology</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8"> <!--Exibir acentos e caracteres especiais sem erro-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Usa a responsividade, ajusta o tamanho da tela de acordo com o dispositivo-->
+    <title>Ramon Technology</title> <!--Titulo que vai aparecer na barra de pesquisa-->
+    <link rel="stylesheet" href="css/style.css"> <!--Conecta o CSS para fazer as alterações visuais-->
 </head>
 
 <body>
 
-    <nav>
+    <nav> <!--Menu de navegação-->
         <ul>
             <li class="inicio"><a href="index.html">Início</a></li>
-            <li class="formulario"><a href="form.html">Formulário</a></li>
+            <li class="formulario"><a href="form.html">Formulário</a></li> <!--Itens do menu-->
             <li class="about"><a href="about.html">Sobre</a></li>
         </ul>
     </nav>
-    <main>
-    <hr> <h1>Promoção de Computadores </h1>
-    <h3 class="sub"> A melhor Black Friday de Computadores gamers do Brasil !</h3> 
+    <main> <!--Conteúdo Principal-->
+    <hr> <!--Faz uma linha horizontal para dividar o menu do resto-->
+    <h1>Promoção de Computadores </h1> <!--Título da página-->
+    <h3 class="sub"> A melhor Black Friday de Computadores gamers do Brasil !</h3> <!--SubTitulo--> 
     
 
-    <div class="Computadores">
+    <div class="Computadores"> <!--Container com todos os produtos-->
         <div>
-            <div class="computador-item computador1"
+            <div class="computador-item computador1" 
                 data-specs="CPU: AMD Ryzen 7-5800X
                             &lt;br&gt; 
                             Memória RAM: 32GB RAM DDR5 
@@ -37,11 +38,11 @@
                             Gabinete: Osiris Black 
                             &lt;br&gt;
                             &lt;h2&gt;Preço: R$3.450,00&lt;/h2&gt;
-                            &lt;p&gt; Á VISTA ou até 10x sem juros.&lt;/p&gt;">
+                            &lt;p&gt; Á VISTA ou até 10x sem juros.&lt;/p&gt;"> <!--Especificações que vai aparecer no modal-->
                 <img src="imagens/imagem1.webp" alt="Computador 1">
                 <h2>Pc Gamer Delta</h2>
-                <p>Ryzen 7-5800X <br> 32GB RAM <br>GeForce RTX 4070 </p>
-                <button class="button btn-ver-mais" style="vertical-align:middle"><span>Ver Mais... </span></button>
+                <p>Ryzen 7-5800X <br> 32GB RAM <br>GeForce RTX 4070 </p> <!--Informações prévias do Pc-->
+                <button class="button btn-ver-mais" style="vertical-align:middle"><span>Ver Mais... </span></button><!--Botão que vai abrir o modal-->
             </div>
 
             <div class="computador-item computador2"
@@ -161,7 +162,7 @@
     </div>   
     </main>
 
-    <div class="Rodape">
+    <div class="Rodape"> <!--Rodapé simples da pagina para preencher-->
         <p class="esquerda">Apoio</p>
         <p class="esquerda">Entre em contato conosco</p>
         <p class="esquerda">Central de Ajuda</p>
@@ -169,17 +170,17 @@
         <p class="direita">Matheus Ramon</p>
     </div>
 
-    <div id="modal-overlay" class="modal-fundo-escondido"></div>
+    <div id="modal-overlay" class="modal-fundo-escondido"></div> <!--Cria um fundo escuro que cobre a pagina-->
 
-    <div id="modal-container" class="modal-caixa-escondida">
+    <div id="modal-container" class="modal-caixa-escondida"> <!--Cria uma caixa branca para o modal-->
         <span id="modal-fechar" class="modal-fechar-btn">&times;</span>
         
         <h2 id="modal-titulo"></h2>
-        <img id="modal-img" src="" alt="PC Gamer" style="max-width: 100%;">
+        <img id="modal-img" src="" alt="PC Gamer" style="max-width: 100%;"><!--É o que vai aparecer no modal-->
         <p id="modal-desc"></p>
     </div>
 
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js"></script> <!--Importa o JavaScript, está no final para o html ser carregado-->
 </body>
 </html>
