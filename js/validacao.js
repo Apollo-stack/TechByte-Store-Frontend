@@ -38,11 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 //se for válido, envia as informações
                 console.log("Formulário válido, enviando...")
             }
-            
         });
         
     } else {
         console.error("Formulário com id='form1' não encontrado!");
     }  
-
 }); 

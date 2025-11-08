@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalContainer = document.getElementById('modal-container');
     const modalOverlay = document.getElementById('modal-overlay');
     const modalFechar = document.getElementById('modal-fechar');
+    
     const modalTitulo = document.getElementById('modal-titulo');
     const modalImg = document.getElementById('modal-img');
     const modalDesc = document.getElementById('modal-desc');
@@ -15,16 +16,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Função para o modal mostrar as informações certas
     function abrirModal(cartaoComputador) {
         
-    
         const titulo = cartaoComputador.querySelector('h2').textContent;
         const imgSrc = cartaoComputador.querySelector('img').src;
         const especificacoesDetalhadas = cartaoComputador.dataset.specs;
 
-    
         modalTitulo.textContent = titulo;
         modalDesc.innerHTML = especificacoesDetalhadas; 
         modalImg.src = imgSrc;
-        
 
         modalContainer.style.display = 'block';
         modalOverlay.style.display = 'block';
@@ -40,10 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     botoesVerMais.forEach(function(botao) {
         botao.addEventListener('click', function() {
          
-        
             const cartao = this.closest('.computador-item');
-            
-          
             abrirModal(cartao); 
         });
     });
